@@ -11,7 +11,7 @@ public class MonsterController
 	//Constructors initialize data members!
 	public MonsterController()
 	{
-		myMonster = new MarshmallowMonster("derpy");
+		myMonster = new MarshmallowMonster("Ni Ni", 2.0, 2, true, 4);
 	}
 	
 	public void start()
