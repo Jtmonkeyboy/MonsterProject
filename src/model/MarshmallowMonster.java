@@ -78,9 +78,8 @@ public class MarshmallowMonster
 	{
 		String description = "This monster is named " +name
 								+ " and it has " + legCount + " legs....."
-								+ " its favorite silly/scary/ spooky thing to say is: "
+								+ " its favorite spooky thing to say is: "
 								+ "Mike Wazowski!";
-		
 		return description;
 	}
 }
