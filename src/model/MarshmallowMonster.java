@@ -8,6 +8,7 @@ public class MarshmallowMonster
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
+	private String catchphrase;
 	
 	public MarshmallowMonster()
 	{
@@ -15,13 +16,14 @@ public class MarshmallowMonster
 		//Generally boring and not as helpful.
 	}
 	
-	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms)
+	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms, String catchphrase)
 	{
 		this.name = name;
 		this.legCount = legCount;
 		this.eyeCount = eyeCount;
 		this.hasNoses = hasNose;
 		this.armCount = arms;
+		this.catchphrase = catchphrase;
 	}
 	
 	public String getName()
@@ -49,6 +51,11 @@ public class MarshmallowMonster
 		return armCount;
 	}
 	
+	public String setCatchphrase()
+	{
+		return catchphrase;
+	}
+	
 	public void setName(String name)
 	{
 		this.name = name;
@@ -74,12 +81,17 @@ public class MarshmallowMonster
 		this.armCount = arms;
 	}
 	
+	public void setCatchphrase(String catchphrase)
+	{
+		this.catchphrase = catchphrase;
+	}
+	
 	public String toString()
 	{
 		String description = "This monster is named " +name
 								+ " and it has " + legCount + " legs....."
 								+ " its favorite spooky thing to say is: "
-								+ "Mike Wazowski!";
+								+ catchphrase;
 		return description;
 	}
 }

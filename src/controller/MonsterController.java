@@ -14,7 +14,7 @@ public class MonsterController
 	//Constructors initialize data members!
 	public MonsterController()
 	{
-		myMonster = new MarshmallowMonster("Ni Ni", 2.0, 2, true, 4);
+		myMonster = new MarshmallowMonster("Ni Ni", 2.0, 2, true, 4, "Mike Wazowski!");
 		userMonster = new MarshmallowMonster();
 	}
 	
@@ -32,11 +32,11 @@ public class MonsterController
 		userMonster.setName(name);
 		
 //		System.out.println("How many legs does your monster have?");
-		String legCount = JOptionPane.showInputDialog(null, "How many legs does you monster have?");
+		String legCount = JOptionPane.showInputDialog(null, "How many legs does %s have?", name);
 //		String legCount = inputMonster.next();
 		while(!validDouble(legCount))
 		{
-			legCount = JOptionPane.showInputDialog(null, "Try again. How many legs does your monster have?");
+			legCount = JOptionPane.showInputDialog(null, "Try again. How many legs does %s have?", name);
 		}
 //		System.out.println(Math.abs(-5.0));
 //		String guess = JOptionPane.showInputDialog(null, "Testing.. Testing");
@@ -45,26 +45,27 @@ public class MonsterController
 		userMonster.setLegCount(Math.abs(Double.parseDouble(legCount)));
 		
 //		System.out.println("How many eyes does your monster have?");
-		String eyeCount = JOptionPane.showInputDialog(null, "How many eyes does your monster have?");
+		String eyeCount = JOptionPane.showInputDialog(null, "How many eyes does %s have?", name);
 //		String eyeCount = inputMonster.next();
 		while(!validInt(eyeCount))
 		{
-			eyeCount = JOptionPane.showInputDialog(null, "Try again. How many eyes does your monster have?");
+			eyeCount = JOptionPane.showInputDialog(null, "Try again. How many eyes does %s have?", name);
 		}
 		userMonster.setEyeCount(Math.abs(Integer.parseInt(eyeCount)));
 		
 //		System.out.println("True or false? Does your monster have a nose?");
-		String hasNoses = JOptionPane.showInputDialog(null, "True or false? Does your monster have a nose?");
+		String hasNoses = JOptionPane.showInputDialog(null, "True or false? Does %s have a nose?", name);
 //		String hasNoses = inputMonster.next();
 		userMonster.setHasNoses(Boolean.parseBoolean(hasNoses.toLowerCase()));
 		
 //		System.out.println("How many arms does your monster have?");
-		String armCount = JOptionPane.showInputDialog(null, "How many arms does your monster have?");
+		String armCount = JOptionPane.showInputDialog(null, "How many arms does %s have?", name);
 //		String armCount = inputMonster.next();
 		while(!validInt(armCount))
 		{
-			armCount = JOptionPane.showInputDialog(null, "Try again. How many arms does your monster have?");
+			armCount = JOptionPane.showInputDialog(null, "Try again. How many arms does %s have?", name);
 		}
+		String catchphrase = JOptionPane.showInputDialog(null, "");
 		userMonster.setArmCount(Math.abs(Integer.parseInt(armCount)));
 		
 		if(hasNoses.toLowerCase().equals("true"))
@@ -74,27 +75,27 @@ public class MonsterController
 			{
 				JOptionPane.showMessageDialog(null, "Your monster's name is " + name + ".\n"
 						+ "Your monster has " + Math.abs(Double.parseDouble(legCount)) + " legs.\n"
-								+ "You gave your monster " + Math.abs(Integer.parseInt(eyeCount)) + " eyes.\n"
-								+ "Your monster has a nose.\n"
-								+ "Your monster has " + Math.abs(Integer.parseInt(armCount)) + " arms.\n\n"
-								+ "Your monster is a human!!!!");
+						+ "You gave your monster " + Math.abs(Integer.parseInt(eyeCount)) + " eyes.\n"
+						+ "Your monster has a nose.\n"
+						+ "Your monster has " + Math.abs(Integer.parseInt(armCount)) + " arms.\n\n"
+						+ "Your monster is a human!!!!");
 			}
 			else
 			{
 				JOptionPane.showMessageDialog(null, "Your monster's name is " + name + ".\n"
 						+ "Your monster has " + Math.abs(Double.parseDouble(legCount)) + " legs.\n"
-								+ "You gave your monster " + Math.abs(Integer.parseInt(eyeCount)) + " eyes.\n"
-								+ "Your monster has a nose.\n"
-								+ "Your monster has " + Math.abs(Integer.parseInt(armCount)) + " arms.");
+						+ "You gave your monster " + Math.abs(Integer.parseInt(eyeCount)) + " eyes.\n"
+						+ "Your monster has a nose.\n"
+						+ "Your monster has " + Math.abs(Integer.parseInt(armCount)) + " arms.");
 			}
 		}
 		else
 		{
 			JOptionPane.showMessageDialog(null, "Your monster's name is " + name + ".\n"
 					+ "Your monster has " + Math.abs(Double.parseDouble(legCount)) + " legs.\n"
-							+ "You gave your monster " + Math.abs(Integer.parseInt(eyeCount)) + " eyes.\n"
-							+ "Your monster does not have a nose.\n"
-							+ "Your monster has " + Math.abs(Integer.parseInt(eyeCount)) + " arms.");
+					+ "You gave your monster " + Math.abs(Integer.parseInt(eyeCount)) + " eyes.\n"
+					+ "Your monster does not have a nose.\n"
+					+ "Your monster has " + Math.abs(Integer.parseInt(eyeCount)) + " arms.");
 		}
 /*		System.out.println("Your monster's name is " + name + ".");
 		System.out.println("Your monster has " + legCount + " legs.");
