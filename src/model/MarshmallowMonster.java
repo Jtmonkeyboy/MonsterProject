@@ -51,7 +51,7 @@ public class MarshmallowMonster
 		return armCount;
 	}
 	
-	public String setCatchphrase()
+	public String getCatchphrase()
 	{
 		return catchphrase;
 	}
