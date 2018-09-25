@@ -32,11 +32,11 @@ public class MonsterController
 		userMonster.setName(name);
 		
 //		System.out.println("How many legs does your monster have?");
-		String legCount = JOptionPane.showInputDialog(null, "How many legs does %s have?", name);
+		String legCount = JOptionPane.showInputDialog(null, String.format("How many legs does %s have?", name));
 //		String legCount = inputMonster.next();
 		while(!validDouble(legCount))
 		{
-			legCount = JOptionPane.showInputDialog(null, "Try again. How many legs does %s have?", name);
+			legCount = JOptionPane.showInputDialog(null, String.format("Try again. How many legs does %s have?", name));
 		}
 //		System.out.println(Math.abs(-5.0));
 //		String guess = JOptionPane.showInputDialog(null, "Testing.. Testing");
@@ -45,25 +45,25 @@ public class MonsterController
 		userMonster.setLegCount(Math.abs(Double.parseDouble(legCount)));
 		
 //		System.out.println("How many eyes does your monster have?");
-		String eyeCount = JOptionPane.showInputDialog(null, "How many eyes does %s have?", name);
+		String eyeCount = JOptionPane.showInputDialog(null, String.format("How many eyes does %s have?", name));
 //		String eyeCount = inputMonster.next();
 		while(!validInt(eyeCount))
 		{
-			eyeCount = JOptionPane.showInputDialog(null, "Try again. How many eyes does %s have?", name);
+			eyeCount = JOptionPane.showInputDialog(null, String.format("Try again. How many eyes does %s have?", name));
 		}
 		userMonster.setEyeCount(Math.abs(Integer.parseInt(eyeCount)));
 		
 //		System.out.println("True or false? Does your monster have a nose?");
-		String hasNoses = JOptionPane.showInputDialog(null, "True or false? Does %s have a nose?", name);
+		String hasNoses = JOptionPane.showInputDialog(null, String.format("True or false? Does %s have a nose?", name));
 //		String hasNoses = inputMonster.next();
 		userMonster.setHasNoses(Boolean.parseBoolean(hasNoses.toLowerCase()));
 		
 //		System.out.println("How many arms does your monster have?");
-		String armCount = JOptionPane.showInputDialog(null, "How many arms does %s have?", name);
+		String armCount = JOptionPane.showInputDialog(null, String.format("How many arms does %s have?", name));
 //		String armCount = inputMonster.next();
 		while(!validInt(armCount))
 		{
-			armCount = JOptionPane.showInputDialog(null, "Try again. How many arms does %s have?", name);
+			armCount = JOptionPane.showInputDialog(null, String.format("Try again. How many arms does %s have?", name));
 		}
 		String catchphrase = JOptionPane.showInputDialog(null, "");
 		userMonster.setArmCount(Math.abs(Integer.parseInt(armCount)));
