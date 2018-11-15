@@ -65,7 +65,6 @@ public class MonsterController
 		{
 			armCount = JOptionPane.showInputDialog(null, String.format("Try again. How many arms does %s have?", name));
 		}
-		String catchphrase = JOptionPane.showInputDialog(null, "");
 		userMonster.setArmCount(Math.abs(Integer.parseInt(armCount)));
 		
 		if(hasNoses.toLowerCase().equals("true"))
